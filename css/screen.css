@@ -5,7 +5,7 @@ body {
 .bookContainer {
     outline: 1px solid #aaa;
     width: 350px;
-    height: 230px;
+    height: 250px;
     background-color: #fff;
     float: left;
     margin: 5px;
@@ -51,7 +51,7 @@ body {
 }
 
 #addBook div {
-    width: 550px;
+    
 }
 
 #addBook div:after {
