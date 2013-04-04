@@ -4,6 +4,7 @@
         <meta charset="UTF-8"/>
         <title>Backbone.js Library</title>
         <link rel="stylesheet" href="css/screen.css">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
     </head>
     <body>
         <div id="books">
@@ -19,25 +20,13 @@
             </form>
         </div>
         
-        <div class="bookContainer">
-            <img src="img/cover.jpg"/>
-            <ul>
-                <li>Title</li>
-                <li>Author</li>
-                <li>Release Date</li>
-                <li>Keywords</li>
-            </ul>
-        
-            <button class="delete">Delete</button>
-        </div>
-        
         <script id="bookTemplate" type="text/template">
             <img src="<%= coverImage %>"/>
             <ul>
                 <li><%= title %></li>
                 <li><%= author %></li>
-                <li><%= releaseDate %></li>
-                <li><%= keywords %></li>
+                <li><%= $.format.date( new Date( releaseDate ), 'MMMM yyyy' ) %></li>
+                <li><% _.each( keywords, function( keyobj ) {%> <%= keyobj.keyword %><% } ); %></li>
             </ul>
         
             <button class="delete">Delete</button>
@@ -46,6 +35,8 @@
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
         <script src="http://documentcloud.github.com/backbone/backbone.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<script src="js/lib/jquery.dateFormat-1.0.js"></script>
         <script src="js/models/book.js"></script>
         <script src="js/collections/library.js"></script>
         <script src="js/views/book.js"></script>

@@ -18,3 +18,8 @@ $(function() {
 
     new app.LibraryView();
 });
+
+$(function() {
+    $( '#releaseDate' ).datepicker();
+    new app.LibraryView();
+});

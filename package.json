@@ -1,0 +1,10 @@
+{
+    "name": "uberviewer",
+    "version": "0.0.1",
+    "description": "All-in-one digital object viewer using the Backbone framework",
+    "dependencies": {
+        "express": "~3.1.0",
+        "path": "~0.4.9",
+        "mongoose": "~3.5.5"
+    }
+}
